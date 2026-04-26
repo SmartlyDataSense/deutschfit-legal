@@ -34,6 +34,29 @@ header {
   margin-bottom: 1.5rem;
 }
 
+.brand {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.brand img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+header.hero .brand img {
+  height: 56px;
+}
+
+.brand .wordmark-on-light { display: block; }
+.brand .wordmark-on-dark { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  .brand .wordmark-on-light { display: none; }
+  .brand .wordmark-on-dark { display: block; }
+}
+
 header h1 {
   font-family: "Playfair Display", Georgia, serif;
   font-weight: 700;
