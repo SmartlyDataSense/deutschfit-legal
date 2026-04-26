@@ -13,8 +13,8 @@
   </header>
 
   <main>
-    <p><strong>Effective date:</strong> 2026-04-22</p>
-    <p><strong>Version:</strong> 1.0.0 (beta)</p>
+    <p><strong>Effective date:</strong> 2026-04-26</p>
+    <p><strong>Version:</strong> 1.0.1 (beta)</p>
 
     <h2>1. Who we are</h2>
     <p>DeutschFit (the &ldquo;app&rdquo;) is operated by SmartlyDataSense. You can contact us at <a href="mailto:support@deutschfit.dev">support@deutschfit.dev</a>.</p>
@@ -25,7 +25,7 @@
       <li><strong>Exam preferences:</strong> chosen exam board (Goethe / TELC / ÖSD / TestDaF / ECL / Pflege / Beruf Tourismus) and CEFR level (A1-C2).</li>
       <li><strong>Learning activity:</strong> exercise attempts, scores, time on task, and progress per CEFR competence (Lesen, Hören, Schreiben, Sprechen, Grammar, Landeskunde).</li>
       <li><strong>Graded work:</strong> your Schreiben text submissions and Sprechen audio recordings, used to produce feedback.</li>
-      <li><strong>Device diagnostics:</strong> crash reports and anonymous performance metrics (via Expo / Sentry) to improve stability.</li>
+      <li><strong>Device diagnostics:</strong> crash reports and anonymous performance metrics (via Expo Updates) to improve stability.</li>
     </ul>
 
     <h2>3. How we use it</h2>
@@ -46,7 +46,17 @@
     <ul>
       <li>Graded submissions: retained while your account is active.</li>
       <li>Raw audio recordings: deleted 90 days after grading.</li>
-      <li>Account data: deleted within 30 days of account deletion request.</li>
+      <li><strong>Account data:</strong> deleted <strong>immediately</strong> when
+      you delete your account from inside the mobile app
+      (<em>Settings &rarr; Delete account</em>) or from the website
+      (<em>deutschfit.app/account &rarr; Delete account</em>). The deletion is
+      processed synchronously and is irreversible. An immutable audit record of
+      the deletion (your user ID, email, timestamp, and source) is retained for
+      12 months as evidence under GDPR Art. 30 record-of-processing
+      requirements; it is never used for any other purpose and is accessible
+      only to the data controller.</li>
+      <li><strong>Graded submissions and audio recordings:</strong> deleted in the
+      same transaction as your account.</li>
     </ul>
 
     <h2>7. Your rights (GDPR)</h2>
